@@ -3676,6 +3676,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.ZMoveToObject,
 		C3.Plugins.SpeechRecognition.Cnds.SupportsSpeechRecognition,
 		C3.Plugins.System.Cnds.OnLoadFinished,
+		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Audio.Cnds.IsTagPlaying,
 		C3.Plugins.SpeechSynthesis.Acts.SpeakText,
 		C3.Plugins.System.Cnds.CompareVar
@@ -3912,6 +3913,11 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
+			return () => f0(n1.ExpObject(), "李子");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
 			return () => f0(n1.ExpObject(), "离子");
 		},
 		p => {
@@ -3987,11 +3993,6 @@ self.C3_ExpressionFuncs = [
 		() => "lán méi",
 		() => "梨子",
 		() => "lí zi",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject(), "李子");
-		},
 		() => "桃子",
 		() => "táo zi",
 		() => "西瓜",
