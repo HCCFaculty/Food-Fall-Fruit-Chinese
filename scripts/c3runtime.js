@@ -3720,8 +3720,7 @@ self.C3_JsPropNameTable = [
 	{FoodStatus2: 0},
 	{AnimationPicker: 0},
 	{FrameCounter: 0},
-	{Speech: 0},
-	{Answer: 0}
+	{Speech: 0}
 ];
 }
 
@@ -4000,22 +3999,7 @@ self.C3_ExpressionFuncs = [
 		() => "芒果",
 		() => "máng guǒ",
 		() => "葡萄",
-		() => "pú táo",
-		() => "Q1",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject(), "我的名字是");
-		},
-		() => "我的名字是",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject(), "我叫");
-		},
-		() => "我叫",
-		() => "你叫什么名字?",
-		() => "李梅"
+		() => "pú táo"
 ];
 
 
