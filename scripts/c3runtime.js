@@ -3642,6 +3642,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.SpeechRecognition.Acts.StopSpeechRecognition,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.SpeechRecognition.Cnds.IsRecognisingSpeech,
 		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Plugins.SpeechRecognition.Acts.RequestSpeechRecognition,
 		C3.Plugins.System.Cnds.EveryTick,
@@ -3671,7 +3672,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.SpeechRecognition.Cnds.IsRecognisingSpeech,
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.Sprite.Acts.ZMoveToObject,
 		C3.Plugins.SpeechRecognition.Cnds.SupportsSpeechRecognition,
@@ -3873,7 +3873,6 @@ self.C3_ExpressionFuncs = [
 			return () => f0(n1.ExpObject(), "苹果");
 		},
 		() => -1,
-		() => -15,
 		() => "correct",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -3943,12 +3942,12 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("Score: ", v0.GetValue());
 		},
-		() => -10,
 		() => "Tap to play again.",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("You scored: ", v0.GetValue());
 		},
+		() => -15,
 		() => "Listening",
 		() => "TapToSpeak",
 		p => {
